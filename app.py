@@ -1,10 +1,10 @@
+import os
 import streamlit as st
 import torch
 import torchvision.transforms as transforms
 from PIL import Image, UnidentifiedImageError
 import io
 import h5py
-import numpy as np
 import timm
 
 
@@ -26,6 +26,21 @@ def load_model(model_path, num_classes):
     # Load the state dict into the model
     model.load_state_dict(model_weights, strict=False)
     return model
+
+# Construct the model path
+model_folder = 'C:\Kidney Disease Detection' 
+model_subfolder = 'Model'
+model_filename = 'my_model (1).h5'
+
+model_path = os.path.join(model_folder, model_subfolder, model_filename)
+
+# Print the path for debugging
+print("Model path:", model_path)
+
+# Load model
+model = load_model(model_path, num_classes=4)
+model.eval()
+
 
 
 # Image preprocessing function
