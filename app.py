@@ -27,14 +27,10 @@ def load_model(model_path, num_classes):
     model.load_state_dict(model_weights, strict=False)
     return model
 
-# Construct the model path
-model_folder = 'C:\Kidney Disease Detection' 
-model_subfolder = 'Model'
 model_filename = 'my_model (1).h5'
+model_path = os.path.join('Model', model_filename)
 
-model_path = os.path.join(model_folder, model_subfolder, model_filename)
-
-# Print the path for debugging
+# Print the path for debugging (you can remove this in production)
 print("Model path:", model_path)
 
 # Load model
