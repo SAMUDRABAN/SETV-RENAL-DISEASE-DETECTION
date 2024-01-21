@@ -27,10 +27,9 @@ def load_model(model_path, num_classes):
     model.load_state_dict(model_weights, strict=False)
     return model
 
-model_path = os.path.join('Model','my_model (1).h5')
+model_path = os.path.join("Model", "my_model (1).h5")
+model = load_model(model_path, num_classes=4)
 
-# Print the path for debugging (you can remove this in production)
-print("Model path:", model_path)
 
 # Load model
 model = load_model(model_path, num_classes=4)
