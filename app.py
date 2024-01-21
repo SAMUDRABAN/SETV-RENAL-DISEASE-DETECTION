@@ -30,12 +30,6 @@ def load_model(model_path, num_classes):
 model_path = os.path.join("Model", "my_model (1).h5")
 model = load_model(model_path, num_classes=4)
 
-
-# Load model
-model = load_model(model_path, num_classes=4)
-model.eval()
-
-
 # Image preprocessing function
 def prepare_image(image_bytes):
     transform = transforms.Compose([
