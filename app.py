@@ -27,8 +27,7 @@ def load_model(model_path, num_classes):
     model.load_state_dict(model_weights, strict=False)
     return model
 
-model_filename = 'my_model (1).h5'
-model_path = os.path.join('Model', model_filename)
+model_path = os.path.join('Model','my_model (1).h5')
 
 # Print the path for debugging (you can remove this in production)
 print("Model path:", model_path)
@@ -36,7 +35,6 @@ print("Model path:", model_path)
 # Load model
 model = load_model(model_path, num_classes=4)
 model.eval()
-
 
 
 # Image preprocessing function
