@@ -8,4 +8,3 @@ matplotlib
 seaborn
 h5py
 timm
-os
